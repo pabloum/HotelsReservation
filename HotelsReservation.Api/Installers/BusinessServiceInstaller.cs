@@ -1,4 +1,5 @@
 ﻿using System;
+using HotelsReservation.Repository.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelsReservation.Api.Installers
@@ -10,6 +11,7 @@ namespace HotelsReservation.Api.Installers
             services.AddSingleton<IConfiguration>(configuration);
             services.InjectDataBases(configuration);
             services.InjectAdditionalInterfaces();
+            services.RegisterAllDirectImplementations<IRepository>(ServiceLifetime.Scoped);
         }
 
         public static void InjectAdditionalInterfaces(this IServiceCollection services)
@@ -20,8 +22,6 @@ namespace HotelsReservation.Api.Installers
 
         public static void InjectDataBases(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.RegisterAllDirectImplementations<IService>(ServiceLifetime.Scoped);
-
             //services.AddDbContext<HotelsDbContext>(options =>
             //    options.UseSqlServer(configuration.GetValue<string>("ConnectionStrings:HotelBookinDatabase")));
 
