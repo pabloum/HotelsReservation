@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="Contracts\" />
     <None Remove="Implementations\" />
+    <None Remove="UnitOfWork\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />
     <Folder Include="Implementations\" />
+    <Folder Include="UnitOfWork\" />
   </ItemGroup>
 </Project>
