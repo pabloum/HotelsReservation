@@ -6,7 +6,8 @@ This is an api built for the following Technical Test:ß
 ### Descripción
 Yo como agencia de viajes deseo crear un hotel en mi lista de hoteles preferidos, con el fin obtener una comisión más alta.
 
-Criterios de aceptación Dado que yo como agente de viajes inicie sesión en mi plataforma de viajes y desee gestionar un hotel, entonces:
+### Criterios de aceptación 
+Dado que yo como agente de viajes inicie sesión en mi plataforma de viajes y desee gestionar un hotel, entonces:
 - El sistema deberá permitir crear un nuevo hotel
 - El sistema deberá permitir asignar al hotel cada una de las habitaciones disponibles para reserva
 - El sistema deberá permitir modificar los valores de de cada habitación
