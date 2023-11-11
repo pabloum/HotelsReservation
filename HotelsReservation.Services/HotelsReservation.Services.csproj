@@ -14,4 +14,8 @@
     <Folder Include="Contracts\" />
     <Folder Include="Implementations\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelsReservation.Domain\HotelsReservation.Domain.csproj" />
+    <ProjectReference Include="..\HotelsReservation.Repository\HotelsReservation.Repository.csproj" />
+  </ItemGroup>
 </Project>
