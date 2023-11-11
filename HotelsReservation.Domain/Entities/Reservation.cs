@@ -1,7 +1,7 @@
 ﻿using System;
 namespace HotelsReservation.Domain.Entities
 {
-	public class Assignation : BaseEntity<int>
+	public class Reservation : BaseEntity<int>
 	{
 		public int RoomId { get; set; }
 		public Room Room { get; set; }

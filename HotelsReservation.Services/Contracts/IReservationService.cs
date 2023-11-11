@@ -5,10 +5,10 @@ namespace HotelsReservation.Services.Contracts
 {
 	public interface IReservationService : IService
 	{
-		Task CreateReservation(Assignation reservation);
+		Task CreateReservation(Reservation reservation);
 		Task CancelReservation(int id);
-		Task<IEnumerable<Assignation>> GetReservationsForRoom(int roomId);
-		Task<IEnumerable<Assignation>> GetReservationsForHotel(int hotelId);
+		Task<IEnumerable<Reservation>> GetReservationsForRoom(int roomId);
+		Task<IEnumerable<Reservation>> GetReservationsForHotel(int hotelId);
     }
 }
 

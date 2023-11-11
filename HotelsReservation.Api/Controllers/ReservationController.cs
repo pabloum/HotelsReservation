@@ -15,7 +15,7 @@ namespace HotelsReservation.Api.Controllers
         }
 
 		[HttpPost]
-		public async Task<IActionResult> CreateReservation([FromBody]Assignation reservation)
+		public async Task<IActionResult> CreateReservation([FromBody]Reservation reservation)
 		{
 			await _reservationService.CreateReservation(reservation);
 			return Ok();

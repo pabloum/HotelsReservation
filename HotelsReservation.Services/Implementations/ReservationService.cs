@@ -18,17 +18,17 @@ namespace HotelsReservation.Services.Implementations
             await _unitOfWork.ReservationRepository.Delete(id);
         }
 
-        public Task CreateReservation(Assignation reservation)
+        public Task CreateReservation(Reservation reservation)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Assignation>> GetReservationsForHotel(int hotelId)
+        public async Task<IEnumerable<Reservation>> GetReservationsForHotel(int hotelId)
         {
             return await _unitOfWork.ReservationRepository.GetAssignationsForHotelAsync(hotelId);
         }
 
-        public async Task<IEnumerable<Assignation>> GetReservationsForRoom(int roomId)
+        public async Task<IEnumerable<Reservation>> GetReservationsForRoom(int roomId)
         {
             return await _unitOfWork.ReservationRepository.GetAssignationsForRoomAsync(roomId);
         }

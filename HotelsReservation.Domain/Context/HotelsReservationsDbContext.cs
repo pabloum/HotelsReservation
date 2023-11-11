@@ -14,6 +14,8 @@ namespace HotelsReservation.Domain.Context
 
 		public virtual DbSet<Room> Rooms { get; set; }
 
+		public virtual DbSet<Room> Reservations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Room>(entity =>
@@ -27,6 +29,12 @@ namespace HotelsReservation.Domain.Context
             {
                 entity.HasKey(r => r.Id);
                 entity.ToTable("Hotels");
+            });
+
+            modelBuilder.Entity<Reservation>(entity =>
+            {
+                entity.HasKey(r => r.Id);
+                entity.ToTable("Reservations");
             });
         }
     }
