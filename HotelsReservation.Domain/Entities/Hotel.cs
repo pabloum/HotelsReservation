@@ -9,8 +9,9 @@ namespace HotelsReservation.Domain.Entities
 		public string Country { get; set; }
 		public string City { get; set; }
 
-		//[NotMapped]
         public ICollection<Room> Rooms { get; set; }
+
+		public bool IsActive { get; set; }
 	}
 }
 
