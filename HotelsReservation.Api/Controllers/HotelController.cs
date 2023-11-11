@@ -14,6 +14,12 @@ namespace HotelsReservation.Api.Controllers
 			_hotelService = hotelService;
         }
 
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllHotels()
+        {
+            return Ok(await _hotelService.GetAll());
+        }
+
 		[HttpPost]
 		public async Task<IActionResult> CreateHotel(Hotel hotel)
 		{

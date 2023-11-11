@@ -14,6 +14,11 @@ namespace HotelsReservation.Services.Implementations
             _unitOfWork = unitOfWork;
         }
 
+        public async Task<IEnumerable<Hotel>> GetAll()
+        {
+            return await _unitOfWork.HotelRepository.GetAllAsync(null, null, "Rooms");
+        }
+
         public async Task<Hotel> CreateHotel(Hotel hotel)
         {
             try

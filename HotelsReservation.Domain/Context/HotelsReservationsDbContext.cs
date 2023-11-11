@@ -19,6 +19,7 @@ namespace HotelsReservation.Domain.Context
             modelBuilder.Entity<Room>(entity =>
             {
                 entity.HasKey(r => r.Id);
+                entity.HasOne(r => r.Hotel).WithMany(h => h.Rooms).HasForeignKey(r => r.HotelId);
                 entity.ToTable("Rooms");
             });
 

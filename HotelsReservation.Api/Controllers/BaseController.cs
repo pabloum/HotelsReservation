@@ -10,12 +10,6 @@ namespace HotelsReservation.Api.Controllers
 		public BaseController()
 		{
 		}
-
-		[HttpGet]
-		public IActionResult Success(string message = "")
-		{
-			return Ok(message);
-		}
 	}
 }
 

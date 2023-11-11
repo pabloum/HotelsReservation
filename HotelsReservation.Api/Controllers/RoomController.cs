@@ -1,6 +1,7 @@
 ﻿using System;
 using HotelsReservation.Domain.Entities;
 using HotelsReservation.Services.Contracts;
+using HotelsReservation.Services.Implementations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelsReservation.Api.Controllers
@@ -12,6 +13,12 @@ namespace HotelsReservation.Api.Controllers
         public RoomController(IRoomService roomService)
 		{
             _roomService = roomService;
+        }
+
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllRooms()
+        {
+            return Ok(await _roomService.GetAll());
         }
 
         [HttpPost]
