@@ -11,6 +11,8 @@ namespace HotelsReservation.Api.Installers
 			{
 				var hotelService = scope.ServiceProvider.GetRequiredService<IHotelService>();
 				var roomService = scope.ServiceProvider.GetRequiredService<IRoomService>();
+
+				// populate
 			}
 		}
 	}

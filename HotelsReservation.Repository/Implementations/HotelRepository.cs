@@ -1,11 +1,13 @@
 ﻿using System;
+using HotelsReservation.Domain.Context;
+using HotelsReservation.Domain.Entities;
 using HotelsReservation.Repository.Contracts;
 
 namespace HotelsReservation.Repository.Implementations
 {
-	public class HotelRepository : IHotelRepository
+	public class HotelRepository : BaseRepository<int, Hotel>, IHotelRepository
 	{
-		public HotelRepository()
+		public HotelRepository(HotelsReservationsDbContext context) : base(context)
 		{
 		}
 	}

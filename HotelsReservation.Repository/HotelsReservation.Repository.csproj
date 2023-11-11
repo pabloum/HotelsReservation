@@ -16,4 +16,10 @@
     <Folder Include="Implementations\" />
     <Folder Include="UnitOfWork\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelsReservation.Domain\HotelsReservation.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+  </ItemGroup>
 </Project>

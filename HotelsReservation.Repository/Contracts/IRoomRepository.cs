@@ -1,7 +1,8 @@
-﻿using System;
+﻿using HotelsReservation.Domain.Entities;
+
 namespace HotelsReservation.Repository.Contracts
 {
-	public interface IRoomRepository : IRepository
+    public interface IRoomRepository : IBaseRepository<int, Room>
     {
 	}
 }

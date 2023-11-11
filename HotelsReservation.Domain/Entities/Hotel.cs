@@ -1,9 +1,8 @@
 ﻿using System;
 namespace HotelsReservation.Domain.Entities
 {
-	public class Hotel
+	public class Hotel : BaseEntity<int>
 	{
-		public int Id { get; set; }
 		public string Name { get; set; }
 		public ICollection<Room> Rooms { get; set; }
 	}
