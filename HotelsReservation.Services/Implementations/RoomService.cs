@@ -27,6 +27,31 @@ namespace HotelsReservation.Services.Implementations
                 throw;
             }
         }
+
+        public async Task<Room> ReadRoom(int id)
+        {
+            try
+            {
+                return await _unitOfWork.RoomRepository.FindAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public async Task DeleteRoom(int id)
+        {
+            try
+            {
+                await _unitOfWork.RoomRepository.Delete(id);
+                await _unitOfWork.SaveAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
 
