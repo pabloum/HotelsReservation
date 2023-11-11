@@ -1,5 +1,4 @@
-﻿using System;
-namespace HotelsReservation.Domain.Entities
+﻿namespace HotelsReservation.Domain.Entities
 {
 	public class Room : BaseEntity<int>
     {
