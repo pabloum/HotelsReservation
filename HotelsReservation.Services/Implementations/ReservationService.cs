@@ -18,9 +18,9 @@ namespace HotelsReservation.Services.Implementations
             await _unitOfWork.ReservationRepository.Delete(id);
         }
 
-        public Task CreateReservation(Reservation reservation)
+        public async Task CreateReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.ReservationRepository.AddAsync(reservation);
         }
 
         public async Task<IEnumerable<Reservation>> GetReservationsForHotel(int hotelId)
