@@ -13,6 +13,7 @@ namespace HotelsReservation.Repository.UnitOfWork
         private bool _disposed = false;
         private IHotelRepository _hotelRepository;
         private IRoomRepository _roomRepository;
+        private IReservationRepository _reservationRepository;
 
         public UnitOfWork(HotelsReservationsDbContext context)
         {
@@ -34,6 +35,15 @@ namespace HotelsReservation.Repository.UnitOfWork
             {
                 _roomRepository ??= new RoomRepository(_context);
                 return _roomRepository;
+            }
+        }
+
+        public IReservationRepository ReservationRepository
+        {
+            get
+            {
+                _reservationRepository ??= new ReservationRepository(_context);
+                return _reservationRepository;
             }
         }
 

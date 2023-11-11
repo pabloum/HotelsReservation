@@ -1,12 +1,14 @@
 ﻿using System;
+using HotelsReservation.Domain.Entities;
+
 namespace HotelsReservation.Services.Contracts
 {
 	public interface IReservationService : IService
 	{
-		Task CreateReservatiob();
+		Task CreateReservation(Assignation reservation);
 		Task CancelReservation(int id);
-		Task GetReservationsForRoom(int roomId);
-		Task GetReservationsForHotel(int hotelId);
+		Task<IEnumerable<Assignation>> GetReservationsForRoom(int roomId);
+		Task<IEnumerable<Assignation>> GetReservationsForHotel(int hotelId);
     }
 }
 

@@ -7,6 +7,8 @@ namespace HotelsReservation.Repository.UnitOfWork
 	{
         IHotelRepository HotelRepository { get; }
         IRoomRepository RoomRepository { get; }
+        IReservationRepository ReservationRepository { get; }
+
         Task SaveAsync();
     }
 }

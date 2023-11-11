@@ -10,7 +10,7 @@ namespace HotelsReservation.Domain.Entities
 		public decimal? BaseCost { get; set; }
 		public decimal? Tax { get; set; }
 
-		public string RoomType { get; set; }
+		public string? RoomType { get; set; }
 		public bool IsActive { get; set; }
     }
 }

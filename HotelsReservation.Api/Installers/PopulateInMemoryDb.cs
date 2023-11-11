@@ -24,14 +24,16 @@ namespace HotelsReservation.Api.Installers
             {
                 Name = "Dan Carlton",
                 City = "Medellin",
-                Country = "Colombia"
+                Country = "Colombia",
+                IsActive = true
             });
 
             await hotelService.CreateHotel(new Domain.Entities.Hotel
             {
                 Name = "Hilton",
                 City = "Medellin",
-                Country = "Colombia"
+                Country = "Colombia",
+                IsActive = true
             });
         }
 
@@ -41,35 +43,45 @@ namespace HotelsReservation.Api.Installers
             {
                 Number = "1208",
                 HotelId = 1,
-                Hotel = await hotelService.ReadHotel(1)
+                Hotel = await hotelService.ReadHotel(1),
+                RoomType = "Simple",
+                IsActive = true
             });
 
             await roomService.CreateRoom(new Domain.Entities.Room
             {
                 Number = "1308",
                 HotelId = 1,
-                Hotel = await hotelService.ReadHotel(1)
+                Hotel = await hotelService.ReadHotel(1),
+                RoomType = "Simple",
+                IsActive = true
             });
 
             await roomService.CreateRoom(new Domain.Entities.Room
             {
                 Number = "1408",
                 HotelId = 1,
-                Hotel = await hotelService.ReadHotel(1)
+                Hotel = await hotelService.ReadHotel(1),
+                RoomType = "Penthouse",
+                IsActive = true
             });
 
             await roomService.CreateRoom(new Domain.Entities.Room
             {
                 Number = "1508",
                 HotelId = 2,
-                Hotel = await hotelService.ReadHotel(2)
+                Hotel = await hotelService.ReadHotel(2),
+                RoomType = "Penthouse",
+                IsActive = true
             });
 
             await roomService.CreateRoom(new Domain.Entities.Room
             {
                 Number = "1608",
                 HotelId = 2,
-                Hotel = await hotelService.ReadHotel(2)
+                Hotel = await hotelService.ReadHotel(2),
+                RoomType = "Penthouse",
+                IsActive = true
             });
         }
 
